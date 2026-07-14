@@ -2,7 +2,7 @@ name: CI Pipeline
 
 on:
   push:
-    branch: [main]
+    branches: [main]
 
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
           node-version: 24
 
       - name: Install dependencies
-        run: npm Install
+        run: npm install
 
       - name: Run tests
-        run: npm tests
+        run: npm test
