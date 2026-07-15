@@ -1,11 +1,33 @@
-FROM node
+    FROM node:alpine
 
-RUN addgroup app && adduser -S -G app app
-
-
-USER app
+    RUN addgroup app && adduser -S -G app app
 
 
-WORKDIR /app
+    USER app
 
 
+    WORKDIR /app
+
+
+    COPY package*.json ./
+
+
+    USER root
+
+
+    RUN chown -R app:app .
+
+
+    USER app
+
+
+    RUN npm install
+
+
+    COPY . .
+
+
+    EXPOSE 5173
+
+
+    CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
