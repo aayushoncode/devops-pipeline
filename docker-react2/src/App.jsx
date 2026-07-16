@@ -58,8 +58,8 @@ function App() {
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#social-icon"></use>
           </svg>
-          <h2>yes i am using doker</h2>
-          <p>hi my name ayush kumar sinha</p>
+          <h2>this is simulation game </h2>
+          <p>Join the Vite community</p>
           <ul>
             <li>
               <a href="https://github.com/vitejs/vite" target="_blank">
